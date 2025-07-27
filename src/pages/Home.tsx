@@ -7,8 +7,8 @@ export default function Home() {
         <div className="flex flex-col md:flex-col-2">
           <div className="font-extrabold">
             <h1 className="text-green-500">
-            <span className="text-2xl md:text-5xl">Hello World! </span>
-            <span className="text-2xl md:text-5xl text-blue-600">
+            <span className="text-xl sm:text-2xl md:text-5xl">Hello World! </span>
+            <span className="text-xl sm:text-2xl md:text-5xl text-blue-600">
               I'm John Bytes!
             </span>
             <h6 className="text-xs md:text-sm lg:text-md text-amber-50 font-light">Information Technology Enthusiast</h6>
@@ -19,7 +19,7 @@ export default function Home() {
             Less is More.
         </div>
         <div>
-          <Button label="Know Me!"  to="/about"/>
+          <Button label="Know Me More!"  to="/about"/>
         </div>
       </section>
     </>
