@@ -1,35 +1,45 @@
 import profile from "/profile.jpg";
+import Card from "../components/Card";
+import { NavLink } from "react-router-dom";
+import Skills from "../components/Skills";
+import Carousel from "../components/Carousel";
 
 export default function About() {
   return (
     <>
-      <section className="w-full h-screen px-2 sm:px-4 md:px-8 flex flex-col items-center justify-center bg-gray-800 text-center gap-4 font-mono pt-5">
-        <div className="w-64 pt-20 h-screen grid grid-rows-5 md:grid-flow-col gap-4">
-          
-          <div className="row-span-1 flex justify-center border border-white items-center md:col-span-5">
+      <section className="w-full h-full px-4 sm:px-6 md:px-8 bg-gray-800 text-center gap-4 font-mono pt-5">
+        <div className="md:h-screen p-5 flex flex-col md:flex-row gap-6">
+          <div className="md:w-1/3 flex flex-col pt-6  rounded-2xl items-center">
             <img
-            src={profile}
-            alt="profile"
-            className="w-30 h-30 rounded-full object-cover"
-          ></img>
+              src={profile}
+              alt="profile"
+              className="w-30 h-30 rounded-full object-cover"
+            ></img>
+            <h1 className="text-xl md:text-2xl pt-5 font-extrabold text-blue-600">
+              Johndel Wolfe
+            </h1>
+            <span className="text-green-500 mb-2 font-semibold">IT Student</span>
+            <Card title="SKILLS">
+              <div>
+                <Skills />
+              </div>
+            </Card>
           </div>
 
-          <div className="row-span-1 md:col-span-3 border border-white text-blue-600">
-            1fghfghfghfgh
-          </div>
+          <hr className="border-green-400" />
 
-          <div className="row-span-1 md:col-span-3 border border-white text-pink-600">
-            3
-          </div>
+          <div className="md:w-full flex flex-col space-y-3">
+            <Card
+              title="BIOGRAPHY"
+              content="The rapid evolution of technology drives my passion for IT, particularly in Web Development, Graphics, and Networking. What motivates me to continue learning and growing in this field is my family."
+            />
 
-          <div className="row-span-1 md:col-span-3 border border-white text-green-600">
-            4
+            <Card title="PROJECTS">
+              <NavLink to="/projects" className={"text-red-600 font-extrabold"}>
+                <Carousel />
+              </NavLink>
+            </Card>
           </div>
-
-          <div className="row-span-1 md:col-span-3 border border-white text-orange-600">
-            5
-          </div>
-          
         </div>
       </section>
     </>
