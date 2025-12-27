@@ -2,7 +2,7 @@ import profile from "/profile.jpg";
 import Card from "../components/Card";
 import { NavLink } from "react-router-dom";
 import Skills from "../components/Skills";
-import Carousel from "../components/Carousel";
+import Carousel from "../components/ProjectCarousel";
 
 export default function About() {
   return (
@@ -18,27 +18,25 @@ export default function About() {
             <h1 className="text-xl md:text-2xl pt-5 font-extrabold text-blue-600">
               Johndel Wolfe
             </h1>
-            <span className="text-green-500 mb-2 font-semibold">IT Student</span>
-            <Card title="SKILLS">
-              <div>
-                <Skills />
-              </div>
-            </Card>
+            <span className="text-green-500 mb-2 font-semibold">
+              IT Student
+            </span>
+            <Skills />
           </div>
 
-          <hr className="border-green-400" />
-
-          <div className="md:w-full flex flex-col space-y-3">
+          <div className="md:max-w-screen-lg flex flex-col space-y-3">
             <Card
               title="BIOGRAPHY"
-              content="The rapid evolution of technology drives my passion for IT, particularly in Web Development, Graphics, and Networking. What motivates me to continue learning and growing in this field is my family."
+              content="The rapid evolution of technology drives my passion for IT, particularly in Web Development, Graphics, and Networking."
             />
-
-            <Card title="PROJECTS">
-              <NavLink to="/projects" className={"text-red-600 font-extrabold"}>
-                <Carousel />
-              </NavLink>
+            
+            <Card
+              title="PROJECTS"
+             >
+              <Carousel/>
             </Card>
+            
+            
           </div>
         </div>
       </section>

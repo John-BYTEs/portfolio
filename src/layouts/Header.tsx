@@ -1,27 +1,112 @@
 import { useState } from "react";
-import Sidebar from "./Sidebar";
+import {
+  NavigationMenu,
+  NavigationMenuItem,
+  NavigationMenuList,
+} from "@/components/ui/navigation-menu";
+import { NavLink } from "react-router-dom";
+import HomeRoundedIcon from "@mui/icons-material/HomeRounded";
+import InfoIcon from "@mui/icons-material/Info";
+import FolderIcon from "@mui/icons-material/Folder";
 
 export default function Header() {
-    const [isOpen, setIsOpen] = useState(false);
-    const handleSideBar = () => {
-    setIsOpen(!isOpen);
-  };
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
     <>
-      <header className="w-full h-full px-4 py-4 z-50 bg-gray-900 shadow-md font-mono font-extrabold text-md md:text-lg lg:text-xl text-start grid grid-cols-1 md:grid-cols-6">
-        <div className="col-1 md:col-span-3">
-          <h1 className="text-start text-blue-500">Johndel Wolfe - Portfolio</h1>
+      <header className="w-full px-4 py-4 bg-gray-700 shadow-md font-mono font-extrabold text-md md:text-lg lg:text-xl">
+        <div className="flex items-center justify-between">
+
+          {/* Logo pero magama pako */}
+          <h1 className="text-gray-200">Johndel Wolfe - Portfolio</h1>
+
+          {/* Web view Navigation */}
+          <div className="rounded-xl bg-gray-600 p-2 flex justify-center items-center">
+            <NavigationMenu className="hidden md:block">
+              <NavigationMenuList className="flex gap-6">
+                <NavigationMenuItem>
+                  <NavLink
+                    to="/"
+                    className={({ isActive }) =>
+                      `text-xl ${
+                        (isActive)
+                          ? "text-gray-700"
+                          : "text-gray-400 hover:text-gray-200"
+                      }`
+                    }
+                  >
+                    <HomeRoundedIcon />
+                  </NavLink>
+                </NavigationMenuItem>
+
+                <NavigationMenuItem>
+                  <NavLink
+                    to="/projects"
+                    className={({ isActive }) =>
+                      `text-xl ${
+                        (isActive)
+                          ? "text-gray-700"
+                          : "text-gray-400 hover:text-gray-200"
+                      }`
+                    }
+                  >
+                    <FolderIcon />
+                  </NavLink>
+                </NavigationMenuItem>
+
+                <NavigationMenuItem>
+                  <NavLink
+                    to="/about"
+                    className={({ isActive }) =>
+                      `text-xl ${
+                        (isActive)
+                          ? "text-gray-700"
+                          : "text-gray-400 hover:text-gray-200"
+                      }`
+                    }
+                  >
+                    <InfoIcon />
+                  </NavLink>
+                </NavigationMenuItem>
+              </NavigationMenuList>
+            </NavigationMenu>
+          </div>
+          {/* Mobile Hamburger */}
+          <button
+            className="md:hidden text-white text-2xl"
+            onClick={() => setIsOpen((prev) => !prev)}
+            aria-label="Toggle menu"
+          >
+            ☰
+          </button>
         </div>
-       
-        <div className="col-2 md:col-6 flex justify-end">
-            <button onClick={handleSideBar} className="material-symbols-outlined text-green-500">menu</button>
-        </div>
-        <Sidebar
-        isOpen={isOpen}
-        isClose={() => {
-          setIsOpen(false);
-        }}
-      />
+
+        {/* Mobile view */}
+        <nav
+          className={`
+              md:hidden
+              overflow-hidden
+              transition-all
+              duration-300
+              ease-in-out
+              ${
+                isOpen
+                  ? "max-h-40 opacity-100 translate-y-0"
+                  : "max-h-0 opacity-0 -translate-y-2"
+              }
+              flex flex-col gap-4 mt-4 text-white
+            `}
+        >
+          <NavLink to="/" className="hover:text-blue-400">
+            Home
+          </NavLink>
+          <NavLink to="/about" className="hover:text-blue-400">
+            About
+          </NavLink>
+          <NavLink to="/projects" className="hover:text-blue-400">
+            Projects
+          </NavLink>
+        </nav>
       </header>
     </>
   );

@@ -7,12 +7,20 @@ export interface Item {
 
 export const items : Item[] = [
     {
+      title: "Web Portfolio",
+      description:
+        "A ReactJS web portfolio that showcases my recent project achievements in my IT journey.",
+      link: "https://github.com/John-BYTEs/portfolio",
+      image: "/portfolio.png",
+    },
+    {
       title: "Country Explorer",
       description:
         "A ReactJS web application that fetches country data from a provided API endpoint, maps the data, and dynamically displays detailed information about a selected country. The application will leverage React components, hooks, and state management.",
       link: "https://github.com/John-BYTEs/Country-Explorer",
       image: "/countryexplorer.jpg",
     },
+    
     {
       title: "News Scraper",
       description:
@@ -28,31 +36,31 @@ export const items : Item[] = [
       image: "/simplepos.jpg",
     },
     {
-      title: "Long Sleeve Full Sublimation of Bosxmark Motovlog",
+      title: "Bosxmark Motovlog Long Sleeve",
       description:
         "A full sublimation long sleeve design for Bosxmark Motovlog designed to pair with his motorcycle color.",
-      link: "No link available.",
+      link: "/bosxmark-MOCKUP.png",
       image: "/bosxmark-MOCKUP.png",
     },
     {
       title: "Valencia Chess Club Tshirt",
       description:
         "A full sublimation tshirt design for Valencia Chess Club in VNHS.",
-      link: "No link available.",
+      link: "/finalChessClub2.png",
       image: "/finalChessClub2.png",
     },
     {
-      title: "Long Sleeve Full Sublimation of Jomar Motovlog",
+      title: "Jomar Motovlog Long Sleeve",
       description:
         "A full sublimation long sleeve design for Jomar Motovlog.",
-      link: "No link available.",
+      link: "/Jomar_Moto.png",
       image: "/Jomar_Moto.png",
     },
     {
-      title: "Basketball Jersey Design for Purok Makiangayon",
+      title: "Purok Makiangayon Jersey",
       description:
         "A full sublimation jersey design for Purok Makiangayon basketball players.",
-      link: "No link available.",
+      link: "/prkMkiangyn.png",
       image: "/prkMkiangyn.png",
     },
     
