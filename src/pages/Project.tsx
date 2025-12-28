@@ -1,6 +1,4 @@
 import { items } from "../data/Items";
-import HomeRoundedIcon from "@mui/icons-material/HomeRounded";
-import HeartIcon from "@mui/icons-material/HeartBrokenOutlined";
 import CardProject from "@/components/CardProject";
 
 export default function Project() {
