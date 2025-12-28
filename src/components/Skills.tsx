@@ -1,3 +1,4 @@
+
 import {
   Accordion,
   AccordionContent,
@@ -9,16 +10,16 @@ import { items } from '../data/SkillData'
 
 export default function Skills() {
   return (
-    <div className="w-2xs max-w-full">
+    <div className="w-full px-4 sm:px-6 md:px-8">
       
      
       {/* Single Accordion wrapping all items */}
       <Accordion 
         type="single" 
         collapsible 
-        className="w-full max-w-full space-y-1 mt-7"
+        className="max-w-4xl mx-auto space-y-1 mt-7"
       >
-        <h1 className="text-2xl text-gray-100 font-extrabold text-start">Skills</h1>
+
 
         {items.map((skill, index) => (
           <AccordionItem 

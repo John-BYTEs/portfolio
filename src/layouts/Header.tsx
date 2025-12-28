@@ -14,14 +14,14 @@ export default function Header() {
 
   return (
     <>
-      <header className="w-full px-4 py-4 bg-gray-700 shadow-md font-mono font-extrabold text-md md:text-lg lg:text-xl">
+      <header className="w-full px-4 py-4 bg-gray-800/30 shadow-md font-mono font-extrabold text-md md:text-lg lg:text-xl">
         <div className="flex items-center justify-between">
 
           {/* Logo pero magama pako */}
-          <h1 className="text-gray-200">Johndel Wolfe - Portfolio</h1>
+          <h1 className="text-gray-200">John Bytes</h1>
 
           {/* Web view Navigation */}
-          <div className="rounded-xl bg-gray-600 p-2 flex justify-center items-center">
+          <div className="hidden md:flex rounded-xl p-2 justify-center items-center">
             <NavigationMenu className="hidden md:block">
               <NavigationMenuList className="flex gap-6">
                 <NavigationMenuItem>
@@ -91,8 +91,8 @@ export default function Header() {
               ease-in-out
               ${
                 isOpen
-                  ? "max-h-40 opacity-100 translate-y-0"
-                  : "max-h-0 opacity-0 -translate-y-2"
+                  ? "max-h-[var(--nav-height)] opacity-100"
+                  : "max-h-0 opacity-0"
               }
               flex flex-col gap-4 mt-4 text-white
             `}

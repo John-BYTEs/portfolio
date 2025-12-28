@@ -7,39 +7,107 @@ import Carousel from "../components/ProjectCarousel";
 export default function About() {
   return (
     <>
-      <section className="w-full h-full px-4 sm:px-6 md:px-8 bg-gray-800 text-center gap-4 font-mono pt-5">
-        <div className="md:h-screen p-5 flex flex-col md:flex-row gap-6">
-          <div className="md:w-1/3 flex flex-col pt-6  rounded-2xl items-center">
-            <img
-              src={profile}
-              alt="profile"
-              className="w-30 h-30 rounded-full object-cover"
-            ></img>
-            <h1 className="text-xl md:text-2xl pt-5 font-extrabold text-blue-600">
-              Johndel Wolfe
-            </h1>
-            <span className="text-green-500 mb-2 font-semibold">
-              IT Student
-            </span>
-            <Skills />
+    {/* <section className="min-h-screen text-gray-100 font-mono px-4 sm:px-6 md:px-12 lg:px-20 py-8 md:py-12"> */}
+      <div className="max-w-7xl mx-auto">
+        <div className="flex flex-col lg:flex-row gap-8 lg:gap-12">
+          {/* Left Column - Profile & Personal Info */}
+          <div className="lg:w-1/3">
+            <div className="h-full bg-gray-800/50 backdrop-blur-sm rounded-2xl p-6 md:p-8 border border-gray-700 shadow-xl">
+              {/* Profile Image */}
+              <div className="flex flex-col items-center mb-8">
+                <div className="relative mb-6">
+                  <img
+                    src={profile}
+                    alt="Johndel Wolfe - IT Enthusiast"
+                    className="w-48 h-48 md:w-56 md:h-56 rounded-full object-cover border-4 border-gray-700 shadow-lg"
+                  />
+                </div>
+                
+                <h2 className="text-2xl font-sans md:text-3xl font-bold text-white mb-2">
+                  Johndel Wolfe
+                </h2>
+                <span className="text-lg text-gray-400 font-semibold bg-gradient-to-r bg-clip-text mb-4">
+                  IT Enthusiast & Developer
+                </span>
+                
+              </div>
+
+              {/* Skills Section */}
+              <div className="mb-8">
+                <h3 className="text-xl font-bold text-white mb-4 pb-2 border-b border-gray-700">
+                  Core Expertise
+                </h3>
+                <Skills />
+              </div>
+
+              {/* Quick Links/CTA */}
+              <div className="space-y-4">
+                <NavLink
+                  to="/projects"
+                  className="block w-full bg-gray-900 text-white font-semibold py-3 px-6 rounded-xl text-center transition-all duration-300 transform hover:-translate-y-1 shadow-lg"
+                >
+                  View Projects
+                </NavLink>
+                <div className="hidden md:block mt-2">
+                  <div className="border text-center py-30">
+                    Ads
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
 
-          <div className="md:max-w-screen-lg flex flex-col space-y-3">
+          {/* Right Column - Content */}
+          <div className="lg:w-2/3 space-y-8">
+            {/* Biography Card */}
             <Card
-              title="BIOGRAPHY"
-              content="The rapid evolution of technology drives my passion for IT, particularly in Web Development, Graphics, and Networking."
+              title="My Journey"
+              titleClassName="text-2xl font-bold text-white mb-4"
+              content={
+                <div className="space-y-4">
+                  <p className="text-gray-300 leading-relaxed">
+                    The rapid evolution of technology drives my passion for IT, particularly in 
+                    <span className="font-semibold text-gray-400"> Web Development</span>, 
+                    <span className="font-semibold text-gray-500"> Graphics</span>, and 
+                    <span className="font-semibold text-gray-600"> Networking</span>.
+                  </p>
+                  <p className="text-gray-300 leading-relaxed">
+                    I believe in creating technology solutions that are not only functional but 
+                    also accessible and visually engaging. My approach combines technical expertise 
+                    with creative problem-solving to deliver impactful digital experiences.
+                  </p>
+                </div>
+              }
             />
-            
+
+            {/* Philosophy Card */}
             <Card
-              title="PROJECTS"
-             >
-              <Carousel/>
-            </Card>
-            
+              title="My Philosophy"
+              titleClassName="text-2xl font-bold text-white mb-4"
+              content={
+                <div className="space-y-3">
+                  <div className="flex items-start gap-3">
+                    <p className="text-gray-300">
+                      Once you do the hard stuff, it becomes not that hard.
+                    </p>
+                  </div>
+                  
+                </div>
+              }
+            />
+
+            {/* Featured Projects Section */}
+            <div className="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-6 md:p-8 border border-gray-700 shadow-xl">
+              <h2 className="text-2xl font-sans font-bold text-white mb-6">Featured Projects</h2>
+              <Carousel />
+              
+            </div>
+
             
           </div>
         </div>
-      </section>
+      </div>
+    {/* </section> */}
     </>
   );
 }

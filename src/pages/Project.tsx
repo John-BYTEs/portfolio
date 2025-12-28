@@ -6,8 +6,8 @@ import CardProject from "@/components/CardProject";
 export default function Project() {
   return (
     <>
-      <section className="w-full h-full px-2 sm:px-4 md:px-8 flex flex-col items-center justify-center bg-gray-800 text-center gap-4 font-mono pt-5">
-        <main className="flex-1 bg-gray-800 text-gray-200 p-6 overflow-y-auto">
+      {/* <section className="w-full h-full px-2 sm:px-4 md:px-8 flex flex-col items-center justify-center text-center gap-4 font-mono pt-5"> */}
+        <main className="flex-1 text-gray-200 p-6 overflow-y-auto">
           <div className="grid gap-6 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
           {items.map((item, i) => (
           <CardProject key={i} title={item.title} description={item.description} image={item.image} link={item.link}/>
@@ -31,7 +31,7 @@ export default function Project() {
             </div>
           ))} */}
 
-      </section>
+      {/* </section> */}
     </>
   );
 }

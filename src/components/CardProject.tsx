@@ -1,3 +1,5 @@
+import View from '@mui/icons-material/VisibilityRounded';
+
 type CardProjectProps = {
     title?: string;
     description?: string;
@@ -8,7 +10,7 @@ type CardProjectProps = {
 export default function CardProject({title, description, link, image}: CardProjectProps) {
     return (
         <>
-        <div className="bg-gray-900 rounded-lg shadow p-4 flex flex-col">
+        <div className="bg-gray-800 rounded-lg shadow p-4 flex flex-col">
             <img
                 src={image}
                 alt={title || "Project"}
@@ -29,9 +31,9 @@ export default function CardProject({title, description, link, image}: CardProje
                         href={link} 
                         target="_blank" 
                         rel="noopener noreferrer"
-                        className="bg-blue-600 text-white px-3 py-1 rounded hover:bg-blue-700 transition-colors"
+                        className="bg-gray-700 text-white px-3 py-1 rounded hover:bg-gray-600 transition-colors"
                     >
-                        View
+                        <View/>
                     </a>
                 )}
             </div>
