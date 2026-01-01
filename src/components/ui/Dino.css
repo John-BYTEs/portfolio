@@ -11,7 +11,7 @@
   left: 0;
   width: 44px;
   height: 47px;
-  background-image: url('./dino.png');
+  background-image: url('/dino.png');
   background-repeat: no-repeat;
   image-rendering: pixelated;
   image-rendering: crisp-edges;
