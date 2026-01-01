@@ -4,7 +4,9 @@ import { NavLink } from "react-router-dom";
 import Skills from "../components/Skills";
 import Carousel from "../components/ProjectCarousel";
 
+
 export default function About() {
+
   return (
     <>
     {/* <section className="min-h-screen text-gray-100 font-mono px-4 sm:px-6 md:px-12 lg:px-20 py-8 md:py-12"> */}
