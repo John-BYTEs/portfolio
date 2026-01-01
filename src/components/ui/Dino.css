@@ -28,9 +28,3 @@
   0% { background-position: 0 0; }
   100% { background-position: -88px 0; }
 }
-
-/* Duck animation (if you have duck frames) */
-.dino-sprite.duck {
-  /* Add duck styles here */
-  animation: dino-run 0.3s steps(2) infinite;
-}
