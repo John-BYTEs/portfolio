@@ -98,7 +98,7 @@ export default function Header() {
                     ${isOpen ? "max-h-10 opacity-100" : "max-h-0 opacity-0"}
                   `}
             >
-              <MobileNavItem to="/portfolio" icon={HomeRoundedIcon} />
+              <MobileNavItem to="/" icon={HomeRoundedIcon} />
               <MobileNavItem to="/about" icon={InfoIcon} />
               <MobileNavItem to="/projects" icon={FolderIcon} />
             </nav>
