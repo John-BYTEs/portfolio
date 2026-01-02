@@ -104,7 +104,7 @@ export default theme;`}function Rg(a){return typeof a=="number"?`${(a*100).toFix
                     ease-in-out
                     flex flex-row gap-4 items-center
                     ${a?"max-h-10 opacity-100":"max-h-0 opacity-0"}
-                  `,children:[C.jsx(u,{to:"/portfolio",icon:Mg}),C.jsx(u,{to:"/about",icon:_g}),C.jsx(u,{to:"/projects",icon:Ng})]}),C.jsx("button",{onClick:()=>r(!a),className:"text-white p-2",children:a?C.jsx(Xw,{className:"text-gray-200"}):C.jsx($w,{className:"text-gray-200"})})]})]})})})}function Qw(){return C.jsx(C.Fragment,{children:C.jsx("div",{className:`relative min-h-screen w-full overflow-hidden \r
+                  `,children:[C.jsx(u,{to:"/",icon:Mg}),C.jsx(u,{to:"/about",icon:_g}),C.jsx(u,{to:"/projects",icon:Ng})]}),C.jsx("button",{onClick:()=>r(!a),className:"text-white p-2",children:a?C.jsx(Xw,{className:"text-gray-200"}):C.jsx($w,{className:"text-gray-200"})})]})]})})})}function Qw(){return C.jsx(C.Fragment,{children:C.jsx("div",{className:`relative min-h-screen w-full overflow-hidden \r
                        bg-gray-900 text-white`,children:C.jsxs("div",{className:"flex min-h-screen flex-col",children:[C.jsx(Kw,{}),C.jsx("main",{className:"flex-1 w-full overflow-auto",children:C.jsx("div",{className:`mx-auto h-full w-full max-w-full \r
                                   px-4 py-6 sm:px-6 sm:py-8 md:px-8 \r
                                   lg:max-w-screen-xl xl:max-w-screen-2xl`,children:C.jsx(K1,{})})}),C.jsx(_x,{})]})})})}const Zw="/portfolio/profile.jpg";function Dg({title:a,content:r,children:u,className:o=""}){return C.jsxs("section",{className:`
