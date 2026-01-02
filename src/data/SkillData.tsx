@@ -7,18 +7,18 @@ export const items : SkillData[] = [
     {
       skill: "Web Development",
       description:
-        "Web development is the process of building, creating, and maintaining websites and web applications that run online in a browser. It encompasses everything from simple static text pages to complex web applications, e-commerce platforms, and social networks.",
+        "Skilled in building front-end interfaces with React, TailwindCSS, TypeScript, paired with back-end development using Laravel, and MySQL. Experienced in implementing RESTful APIs, user authentication, and database integration through personal projects and coursework.",
     },
     {
         skill: "Networking",
-        description: "Networking refers to the practice of connecting computing devices together to enable communication and resource sharing. It forms the foundation of modern internet, business infrastructure, and digital communication systems."
+        description: "Practical knowledge of network fundamentals including DNS, DHCP, and network topologies. Experienced in configuring routers in lab environment. Capable of troubleshooting connectivity issues, implementing basic security configurations, and understanding subnetting."
     },
     {
         skill: "Graphic Design",
-        description: "Graphic design is the art and practice of planning and projecting ideas and experiences with visual and textual content. It's visual communication that combines images, words, and ideas to convey information to an audience, often to achieve a specific effect or response."
+        description: "Creating visual content and user interface elements using Adobe Creative Suite (Photoshop, Illustrator). Contributed design elements to web development projects, ensuring cohesive visual identity and user-friendly interfaces."
     },
     {
         skill: "Technical Troubleshooting",
-        description: "Technical troubleshooting is a systematic process of diagnosing, identifying, and resolving problems in hardware, software, systems, or networks. It's the methodical approach to fixing technical issues, ranging from simple user errors to complex system failures."
+        description: "Providing technical assistance and troubleshooting hardware, software, and network issues using systematic diagnostic approaches. Experienced in resolving common IT problems, guiding users through solutions, and documenting technical issues and resolutions."
     },
 ];
