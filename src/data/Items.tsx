@@ -63,5 +63,12 @@ export const items : Item[] = [
       link: "./prkMkiangyn.png",
       image: "./prkMkiangyn.png",
     },
+    {
+      title: "Baslay Elem School Alumni T-shirt",
+      description:
+        "A full sublimation t-shirt design for Baslay Elementary School alumni.",
+      link: "./baslayClient.png",
+      image: "./baslayClient.png",
+    },
     
 ];
