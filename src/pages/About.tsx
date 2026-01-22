@@ -1,4 +1,4 @@
-import profile from "/profile.jpg";
+import profile from "/profile2.png";
 import Card from "../components/Card";
 import { NavLink } from "react-router-dom";
 import Skills from "../components/Skills";
