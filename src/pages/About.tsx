@@ -1,4 +1,4 @@
-import profile from "/profile2.png";
+import profile2 from "/profile2.png";
 import Card from "../components/Card";
 import { NavLink } from "react-router-dom";
 import Skills from "../components/Skills";
@@ -19,7 +19,7 @@ export default function About() {
               <div className="flex flex-col items-center mb-8">
                 <div className="relative mb-6">
                   <img
-                    src={profile}
+                    src={profile2}
                     alt="Johndel Wolfe - IT Enthusiast"
                     className="w-48 h-48 md:w-56 md:h-56 rounded-full object-cover border-4 border-gray-700 shadow-lg"
                   />

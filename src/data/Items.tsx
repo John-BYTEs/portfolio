@@ -70,5 +70,12 @@ export const items : Item[] = [
       link: "./baslayClient.png",
       image: "./baslayClient.png",
     },
+    {
+      title: "Cyber Security Awareness",
+      description:
+        "A text graphics for digital security awareness.",
+      link: "./Johndel-Wolfe_TextActivity.png",
+      image: "./Johndel-Wolfe_TextActivity.png",
+    },
     
 ];
