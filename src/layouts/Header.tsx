@@ -31,7 +31,7 @@ export default function Header() {
       <header className="w-full px-4 py-4 bg-gray-800/30 shadow-md font-mono font-extrabold text-md md:text-lg lg:text-xl">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <h1 className="text-gray-200">John Bytes</h1>
+          <h1 className="text-gray-200 px-4">John Bytes</h1>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex rounded-xl p-2 justify-center items-center">

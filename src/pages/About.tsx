@@ -10,7 +10,7 @@ export default function About() {
   return (
     <>
       {/* <section className="min-h-screen text-gray-100 font-mono px-4 sm:px-6 md:px-12 lg:px-20 py-8 md:py-12"> */}
-      <div className="max-w-7xl mx-auto">
+      <div className="max-w-7xl mx-auto pb-10">
         <div className="flex flex-col lg:flex-row gap-8 lg:gap-12">
           {/* Left Column - Profile & Personal Info */}
           <div className="lg:w-1/3">

@@ -1,9 +1,9 @@
 export default function Footer() {
     return (
-        <footer className="w-full text-gray-400 p-6 bg-gray-900 border-t border-gray-800">
-            <div className="max-w-7xl mx-auto">
+        <footer className="w-full text-gray-400 py-6 bg-gray-900 border-t border-gray-800">
+            
                 <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-                    <div className="text-center md:text-left">
+                    <div className="text-center md:text-left px-6">
                         <p className="text-xs md:text-sm">
                             &copy; {new Date().getFullYear()} Johndel Wolfe - Portfolio. All rights reserved.
                         </p>
@@ -12,7 +12,7 @@ export default function Footer() {
                     </p>
                     </div>
                     
-                    <div className="flex items-center gap-4">
+                    <div className="flex items-center px-6">
                         <a
                             href="https://github.com/John-BYTEs"
                             target="_blank"
@@ -26,8 +26,6 @@ export default function Footer() {
                         </a>
                     </div>
                 </div>
-                
-            </div>
         </footer>
     );
 }

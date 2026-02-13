@@ -10,8 +10,7 @@ export default function ProjectCarousel() {
             <CardProject
               key={i}
               title={item.title}
-              image={item.image}
-            />
+              image={item.image} description={""}            />
           ))}
         </div>
       </div>

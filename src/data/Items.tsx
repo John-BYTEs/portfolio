@@ -1,3 +1,5 @@
+import type { ProjectItem } from '@/types/project-types';
+
 export interface Item {
     title : string
     description : string
@@ -5,14 +7,8 @@ export interface Item {
     image : string
 }
 
-export const items : Item[] = [
-    {
-      title: "Web Portfolio",
-      description:
-        "A ReactJS web portfolio that showcases my recent project achievements in my IT journey.",
-      link: "https://github.com/John-BYTEs/portfolio",
-      image: "./portfolio.png",
-    },
+export const items : ProjectItem[] = [
+    
     {
       title: "Country Explorer",
       description:
@@ -64,7 +60,7 @@ export const items : Item[] = [
       image: "./prkMkiangyn.png",
     },
     {
-      title: "Baslay Elem School Alumni T-shirt",
+      title: "BES Alumni Shirt",
       description:
         "A full sublimation t-shirt design for Baslay Elementary School alumni.",
       link: "./baslayClient.png",
@@ -76,6 +72,13 @@ export const items : Item[] = [
         "A text graphics for digital security awareness.",
       link: "./Johndel-Wolfe_TextActivity.png",
       image: "./Johndel-Wolfe_TextActivity.png",
+    },
+    {
+      title: "Web Portfolio",
+      description:
+        "A ReactJS web portfolio that showcases my recent project achievements in my IT journey.",
+      link: "https://github.com/John-BYTEs/portfolio",
+      image: "./portfolio.png",
     },
     
 ];
