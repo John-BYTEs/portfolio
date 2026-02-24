@@ -74,6 +74,13 @@ export const items : ProjectItem[] = [
       image: "./Johndel-Wolfe_TextActivity.png",
     },
     {
+      title: "Kilat Family Logo",
+      description:
+        "A redesign greek inspired badge logo for Kilat family.",
+      link: "./kilatMockup.png",
+      image: "./kilatMockup.png",
+    },
+    {
       title: "Web Portfolio",
       description:
         "A ReactJS web portfolio that showcases my recent project achievements in my IT journey.",
