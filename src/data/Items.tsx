@@ -81,6 +81,13 @@ export const items : ProjectItem[] = [
       image: "./kilatMockup.png",
     },
     {
+      title: "Corazon De Jesus Jersey",
+      description:
+        "A complete basketball jersey design for Corazon De Jesus fish car organization.",
+      link: "./cdj-final.png",
+      image: "./cdj-final.png",
+    },
+    {
       title: "Web Portfolio",
       description:
         "A ReactJS web portfolio that showcases my recent project achievements in my IT journey.",
