@@ -70,7 +70,7 @@ export default function Card({ title, content, children, className = "" }: CardP
     >
       {title && (
         <h1
-          className="text-white font-sans font-bold mb-3
+          className="text-white font-mono font-semibold mb-3
             text-xl
             sm:text-2xl
             md:text-3xl

@@ -58,7 +58,7 @@ export default function About() {
             {/* Biography Card */}
             <Card
               title="My Journey"
-              titleClassName="text-2xl font-bold text-white mb-4"
+              titleClassName="text-2xl  text-white mb-4"
               content={
                 <div className="space-y-4">
                   <p className="text-gray-300 leading-relaxed">
@@ -93,7 +93,7 @@ export default function About() {
             {/* Philosophy Card */}
             <Card
               title="My Philosophy"
-              titleClassName="text-2xl font-bold text-white mb-4"
+              titleClassName="text-2xl text-white mb-4"
               content={
                 <div className="space-y-3">
                   <div className="flex items-start gap-3">
@@ -113,7 +113,7 @@ export default function About() {
               <Carousel />
               <NavLink
                 to="/projects"
-                className="mt-3 block w-full bg-gray-900 text-white font-semibold py-3 px-6 rounded-xl text-center transition-all duration-300 transform hover:-translate-y-1 shadow-lg"
+                className="mt-3 block w-full bg-gray-900 hover:bg-gray-700 text-white font-semibold py-3 px-6 rounded-xl text-center transition-all duration-300 transform hover:-translate-y-1 shadow-lg"
               >
                 View Projects
               </NavLink>
