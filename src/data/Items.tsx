@@ -88,6 +88,41 @@ export const items : ProjectItem[] = [
       image: "./cdj-final.png",
     },
     {
+      title: "Retroceder en el Tiempo Poster",
+      description:
+        "A movie poster titled 'Retroceder en el Tiempo' directed by Mark Cedrix.",
+      link: "./retro.png",
+      image: "./retro.png",
+    },
+    {
+      title: "Mixed Signal Poster",
+      description:
+        "A movie poster titled 'Mixed Signal'.",
+      link: "./mixedSignal.png",
+      image: "./mixedSignal.png",
+    },
+    {
+      title: "Ang Huling Sandali Poster",
+      description:
+        "A movie poster titled 'Ang Huling Sandali' made from Canva.",
+      link: "./poster.png",
+      image: "./poster.png",
+    },
+    {
+      title: "Ride or Die YouTube Thumbnail",
+      description:
+        "A youtube thumbnail for a lyric video titled 'Ride or Die' composed and song by Nevahh J, and Micc Tee.",
+      link: "./thumbnail.png",
+      image: "./thumbnail.png",
+    },
+    {
+      title: "Want YouTube Thumbnail",
+      description:
+        "A youtube thumbnail for a lyric video titled 'Want' composed and song by Nevahh J, and Micc Tee.",
+      link: "./thyumnmiwant.png",
+      image: "./thyumnmiwant.png",
+    },
+    {
       title: "Web Portfolio",
       description:
         "A ReactJS web portfolio that showcases my recent project achievements in my IT journey.",
