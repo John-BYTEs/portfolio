@@ -1,16 +1,31 @@
-import { Link } from "react-router-dom"
+import type { MouseEventHandler } from "react";
 
-type ButtonProps = {
-    label : string
-    to : string
+interface ButtonProps {
+  label: string;
+  to?: string;
+  onClick?: MouseEventHandler<HTMLButtonElement>;
 }
 
-export default function Button({label, to} : ButtonProps) {
-    return (
-        <Link to={to}>
-            <div>
-                <button className="bg-gray-800 hover:bg-gray-600 text-white font-mono text-sm sm:text-base md:text-lg lg:text-xl rounded p-2 px-3 m-3 cursor-pointer animate-bounce">{label}</button>
-            </div>
-        </Link>
-    )
+export default function Button({ label, to, onClick }: ButtonProps) {
+  const handleClick = (e: React.MouseEvent<HTMLButtonElement>) => {
+    if (to && to.startsWith("#")) {
+      e.preventDefault();
+      const element = document.getElementById(to.substring(1));
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+    if (onClick) {
+      onClick(e);
+    }
+  };
+
+  return (
+    <button
+      onClick={handleClick}
+      className="px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg transition-all duration-300 transform hover:-translate-y-1 shadow-lg"
+    >
+      {label}
+    </button>
+  );
 }

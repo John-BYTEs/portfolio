@@ -4,7 +4,6 @@ import {
   NavigationMenuItem,
   NavigationMenuList,
 } from "@/components/ui/navigation-menu";
-import { NavLink } from "react-router-dom";
 import HomeRoundedIcon from "@mui/icons-material/HomeRounded";
 import InfoIcon from "@mui/icons-material/Info";
 import FolderIcon from "@mui/icons-material/Folder";
@@ -14,75 +13,59 @@ import CloseIcon from "@mui/icons-material/Close";
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
 
-  const MobileNavItem = ({ to, icon: Icon }: any) => (
-    <NavLink
-      to={to}
-      className={({ isActive }) =>
-        `hover:text-blue-400 ${isActive ? "text-gray-700" : "text-gray-200"}`
-      }
-      onClick={() => setIsOpen(false)}
+  const scrollToSection = (sectionId: string) => {
+    const section = document.getElementById(sectionId);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+      setIsOpen(false);
+    }
+  };
+
+  const MobileNavItem = ({ to, icon: Icon, label }: any) => (
+    <button
+      onClick={() => scrollToSection(to)}
+      className="text-gray-200 hover:text-blue-400 transition-colors"
+      aria-label={label}
     >
       <Icon />
-    </NavLink>
+    </button>
   );
 
   return (
     <>
-      <header className="w-full px-4 py-4 bg-gray-800/30 shadow-md font-mono font-extrabold text-md md:text-lg lg:text-xl">
+      <header className="w-full px-4 py-4 bg-gray-800/30 shadow-md font-mono font-extrabold text-md md:text-lg lg:text-xl top-0 z-50 backdrop-blur-sm">
         <div className="flex items-center justify-between">
           {/* Logo */}
-
-          <NavLink to="/">
-            <h1 className="text-gray-200 px-4">John Bytes</h1>
-          </NavLink>
+          <button onClick={() => scrollToSection("home")} className="cursor-pointer">
+            <h1 className="text-gray-200 px-4 hover:text-blue-400 transition-colors">
+              John Bytes
+            </h1>
+          </button>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex rounded-xl p-2 justify-center items-center">
             <NavigationMenu className="hidden md:block">
               <NavigationMenuList className="flex gap-6">
-                <NavigationMenuItem>
-                  <NavLink
-                    to="/"
-                    className={({ isActive }) =>
-                      `text-xl ${
-                        isActive
-                          ? "text-gray-700"
-                          : "text-gray-400 hover:text-gray-200"
-                      }`
-                    }
-                  >
-                    <HomeRoundedIcon />
-                  </NavLink>
-                </NavigationMenuItem>
+                
 
                 <NavigationMenuItem>
-                  <NavLink
-                    to="/projects"
-                    className={({ isActive }) =>
-                      `text-xl ${
-                        isActive
-                          ? "text-gray-700"
-                          : "text-gray-400 hover:text-gray-200"
-                      }`
-                    }
-                  >
-                    <FolderIcon />
-                  </NavLink>
-                </NavigationMenuItem>
-
-                <NavigationMenuItem>
-                  <NavLink
-                    to="/about"
-                    className={({ isActive }) =>
-                      `text-xl ${
-                        isActive
-                          ? "text-gray-700"
-                          : "text-gray-400 hover:text-gray-200"
-                      }`
-                    }
+                  <button
+                    onClick={() => scrollToSection("about")}
+                    className="text-gray-400 hover:text-gray-200 transition-colors text-xl"
+                    aria-label="About"
                   >
                     <InfoIcon />
-                  </NavLink>
+                  </button>
+                </NavigationMenuItem>
+
+                <NavigationMenuItem>
+                  <button
+                    onClick={() => scrollToSection("projects")}
+                    className="text-gray-400 hover:text-gray-200 transition-colors text-xl"
+                    aria-label="Projects"
+                  >
+                    <FolderIcon />
+                  </button>
                 </NavigationMenuItem>
               </NavigationMenuList>
             </NavigationMenu>
@@ -93,23 +76,24 @@ export default function Header() {
             {/* Navigation items on the left */}
             <nav
               className={`
-                    overflow-hidden
-                    transition-all
-                    duration-300
-                    ease-in-out
-                    flex flex-row gap-4 items-center
-                    ${isOpen ? "max-h-10 opacity-100" : "max-h-0 opacity-0"}
-                  `}
+                overflow-hidden
+                transition-all
+                duration-300
+                ease-in-out
+                flex flex-row gap-4 items-center
+                ${isOpen ? "max-h-10 opacity-100" : "max-h-0 opacity-0"}
+              `}
             >
-              <MobileNavItem to="/" icon={HomeRoundedIcon} />
-              <MobileNavItem to="/about" icon={InfoIcon} />
-              <MobileNavItem to="/projects" icon={FolderIcon} />
+              <MobileNavItem to="home" icon={HomeRoundedIcon} label="Home" />
+              <MobileNavItem to="about" icon={InfoIcon} label="About" />
+              <MobileNavItem to="projects" icon={FolderIcon} label="Projects" />
             </nav>
 
             {/* Burger button on the right */}
             <button
               onClick={() => setIsOpen(!isOpen)}
               className="text-white p-2"
+              aria-label="Menu"
             >
               {isOpen ? (
                 <CloseIcon className="text-gray-200" />

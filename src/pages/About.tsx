@@ -1,127 +1,135 @@
 import profile2 from "/profile2.png";
-import Card from "../components/Card";
-import { NavLink } from "react-router-dom";
-import Skills from "../components/Skills";
-import Carousel from "../components/ProjectCarousel";
-import TechStack from "@/components/TechStack";
+import { 
+  SiReact, 
+  SiLaravel, 
+  SiMysql, 
+  SiGit, 
+  SiTailwindcss, 
+  SiPhp,
+  SiJavascript,
+  SiTypescript
+} from "react-icons/si";
+import { 
+  TbBrandAdobeIllustrator,
+  TbBrandAdobePhotoshop
+ } from "react-icons/tb";
+ import { FaJava } from "react-icons/fa";
 
 export default function About() {
+  const scrollToProjects = () => {
+    const projectsSection = document.getElementById("projects");
+    if (projectsSection) {
+      projectsSection.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
+  const techStack = [
+    { name: "React", icon: <SiReact className="text-blue-400" size={20} /> },
+    { name: "Laravel", icon: <SiLaravel className="text-red-500" size={20} /> },
+    { name: "MySQL", icon: <SiMysql className="text-blue-600" size={20} /> },
+    { name: "Git", icon: <SiGit className="text-orange-600" size={20} /> },
+    { name: "TailwindCSS", icon: <SiTailwindcss className="text-cyan-400" size={20} /> },
+    { name: "Illustrator", icon: <TbBrandAdobeIllustrator className="text-orange-500" size={20} /> },
+    { name: "Photoshop", icon: <TbBrandAdobePhotoshop className="text-blue-600" size={20} /> },
+    { name: "PHP", icon: <SiPhp className="text-purple-500" size={20} /> },
+    { name: "Java", icon: <FaJava className="text-red-600" size={20} /> },
+    { name: "JavaScript", icon: <SiJavascript className="text-yellow-400" size={20} /> },
+    { name: "TypeScript", icon: <SiTypescript className="text-blue-500" size={20} /> },
+  ];
   
   return (
-    <>
-      {/* <section className="min-h-screen text-gray-100 font-mono px-4 sm:px-6 md:px-12 lg:px-20 py-8 md:py-12"> */}
-      <div className="max-w-7xl mx-auto pb-10">
-        <div className="flex flex-col lg:flex-row gap-8 lg:gap-12">
-          {/* Left Column - Profile & Personal Info */}
-          <div className="lg:w-1/3">
-            <div className="h-full bg-gray-800/50 backdrop-blur-sm rounded-2xl p-6 md:p-8 border border-gray-700 shadow-xl">
-              {/* Profile Image */}
-              <div className="flex flex-col items-center mb-8">
-                <div className="relative mb-6">
-                  <img
-                    src={profile2}
-                    alt="Johndel Wolfe - IT Enthusiast"
-                    className="w-48 h-48 md:w-56 md:h-56 rounded-full object-cover border-4 border-gray-700 shadow-lg"
-                  />
-                </div>
+    <section id="about" className="w-full px-4 sm:px-6 md:px-8 py-12 scroll-mt-20">
+      <div className="max-w-4xl mx-auto">
+        {/* Bio Text */}
+        <div className="mb-8">
+          <p className="text-gray-300 leading-relaxed text-base sm:text-lg mb-4">
+            The rapid evolution of technology drives my passion for IT, particularly in
+            Web Development, Graphics, and Networking.
+          </p>
+          <p className="text-gray-300 leading-relaxed text-base sm:text-lg">
+            I believe in creating technology solutions that are not only functional but also
+            accessible and visually engaging. My approach combines technical expertise with
+            creative problem-solving to deliver impactful digital experiences.
+          </p>
+        </div>
 
-                <h2 className="text-2xl font-sans md:text-3xl font-bold text-white mb-2">
-                  Johndel Wolfe
-                </h2>
-                <span className="text-lg text-gray-400 font-semibold bg-gradient-to-r bg-clip-text mb-4">
-                  IT Enthusiast & Developer
-                </span>
-              </div>
+        <hr className="border-gray-700 my-6" />
 
-              {/* Skills Section */}
-              <div className="mb-8">
-                <h3 className="text-xl font-bold text-white mb-4 pb-2 border-b border-gray-700">
-                  Core Expertise
-                </h3>
-                <Skills />
-              </div>
-
-              {/* Quick Links/CTA */}
-              <div className="space-y-4">
-                <h3 className="text-xl font-bold text-white mb-4 pb-2 border-b border-gray-700">
-                  Tech Stack
-                </h3>
-                <TechStack />
-              </div>
-
-              
-            </div>
-          </div>
-
-          {/* Right Column - Content */}
-          <div className="lg:w-2/3 space-y-8">
-            {/* Biography Card */}
-            <Card
-              title="My Journey"
-              titleClassName="text-2xl  text-white mb-4"
-              content={
-                <div className="space-y-4">
-                  <p className="text-gray-300 leading-relaxed">
-                    The rapid evolution of technology drives my passion for IT,
-                    particularly in
-                    <span className="font-semibold text-gray-400">
-                      {" "}
-                      Web Development
-                    </span>
-                    ,
-                    <span className="font-semibold text-gray-500">
-                      {" "}
-                      Graphics
-                    </span>
-                    , and
-                    <span className="font-semibold text-gray-600">
-                      {" "}
-                      Networking
-                    </span>
-                    .
-                  </p>
-                  <p className="text-gray-300 leading-relaxed">
-                    I believe in creating technology solutions that are not only
-                    functional but also accessible and visually engaging. My
-                    approach combines technical expertise with creative
-                    problem-solving to deliver impactful digital experiences.
-                  </p>
-                </div>
-              }
+        {/* Profile Info */}
+        <div className="mb-8">
+          <div className="flex items-center gap-4 mb-2">
+            <img
+              src={profile2}
+              alt="Johndel Wolfe"
+              className="w-16 h-16 rounded-full object-cover border-2 border-gray-600"
             />
-
-            {/* Philosophy Card */}
-            <Card
-              title="My Philosophy"
-              titleClassName="text-2xl text-white mb-4"
-              content={
-                <div className="space-y-3">
-                  <div className="flex items-start gap-3">
-                    <p className="text-gray-300">
-                      Once you do the hard stuff, it becomes not that hard.
-                    </p>
-                  </div>
-                </div>
-              }
-            />
-
-            {/* Featured Projects Section */}
-            <div className="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-6 md:p-8 border border-gray-700 shadow-xl">
-              <h2 className="text-2xl font-sans font-bold text-white mb-6">
-                Featured Projects
+            <div>
+              <h2 className="text-xl font-bold text-white">
+                Johndel Wolfe
               </h2>
-              <Carousel />
-              <NavLink
-                to="/projects"
-                className="mt-3 block w-full bg-gray-900 hover:bg-gray-700 text-white font-semibold py-3 px-6 rounded-xl text-center transition-all duration-300 transform hover:-translate-y-1 shadow-lg"
-              >
-                View Projects
-              </NavLink>
+              <p className="text-gray-400 text-sm">
+                IT Enthusiast & Developer
+              </p>
             </div>
           </div>
         </div>
+
+        <hr className="border-gray-700 my-6" />
+
+        {/* Core Expertise */}
+        <div className="mb-8">
+          <h3 className="text-lg font-semibold text-white mb-3">
+            Core Expertise
+          </h3>
+          <ul className="space-y-1 text-gray-300">
+            <li>• Web Development</li>
+            <li>• Networking</li>
+            <li>• Graphic Design</li>
+            <li>• Technical Troubleshooting</li>
+          </ul>
+        </div>
+
+        <hr className="border-gray-700 my-6" />
+
+        {/* Tech Stack */}
+        <div className="mb-8">
+          <h3 className="text-lg font-semibold text-white mb-3">
+            Tech Stack
+          </h3>
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-2">
+            {techStack.map((tech) => (
+              <div key={tech.name} className="flex items-center gap-2 text-gray-300">
+                {tech.icon}
+                <span>{tech.name}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <hr className="border-gray-700 my-6" />
+
+        {/* Philosophy */}
+        <div className="mb-8">
+          <h3 className="text-lg font-semibold text-white mb-2">
+            My Philosophy
+          </h3>
+          <p className="text-gray-300 italic text-base sm:text-lg">
+            "Once you do the hard stuff, it becomes not that hard."
+          </p>
+        </div>
+
+        <hr className="border-gray-700 my-6" />
+
+        {/* View Projects Button */}
+        <div>
+          <button
+            onClick={scrollToProjects}
+            className="text-blue-400 hover:text-blue-300 font-semibold text-lg transition-colors duration-200 cursor-pointer"
+          >
+            View All Projects →
+          </button>
+        </div>
       </div>
-      {/* </section> */}
-    </>
+    </section>
   );
 }

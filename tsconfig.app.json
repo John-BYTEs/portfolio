@@ -8,7 +8,7 @@
     "skipLibCheck": true,
 
     //basta sa shadcn ni nako nakuha//
-    "baseUrl": ".",
+   
     "paths": {
       "@/*": [
         "./src/*"

@@ -1,23 +1,29 @@
-import { Routes, Route } from 'react-router-dom'
 import './App.css'
 import Home from './pages/Home'
-import MainLayout from './layouts/MainLayout'
 import About from './pages/About'
 import Project from './pages/Project'
+import Footer from './layouts/Footer'
+import Header from './layouts/Header'
+import ScrollToTop from './components/ScrollToTop'
 
 function App() {
-
-
   return (
-    <>
-      <Routes>
-        <Route element={<MainLayout />}>
-          <Route path="/" element={<Home />}/>
-          <Route path="/about" element={<About />}/>
-          <Route path="/projects" element={<Project />}/>
-        </Route>
-      </Routes>
-    </>
+    <div className="App">
+      <Header />
+      <main>
+        <section id="home">
+          <Home />
+        </section>
+        <section id="about">
+          <About />
+        </section>
+        <section id="projects">
+          <Project />
+        </section>
+      </main>
+      <Footer />
+      <ScrollToTop />
+    </div>
   )
 }
 

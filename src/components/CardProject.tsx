@@ -1,63 +1,42 @@
-// import View from '@mui/icons-material/VisibilityRounded';
+interface CardProjectProps {
+  title: string;
+  description: string;
+  image?: string;
+  link?: string;
+}
 
-// type CardProjectProps = {
-//     title?: string;
-//     description?: string;
-//     link?: string;
-//     image: string;
-// }
-
-// export default function CardProject({title, description, link, image}: CardProjectProps) {
-//     return (
-//         <>
-//         <div className="bg-gray-800 rounded-lg shadow p-4 flex flex-col">
-//             <img
-//                 src={image}
-//                 alt={title || "Project"}
-//                 className="rounded mb-2 w-full h-48 object-cover"
-//             />
-//             <h2 className="font-bold text-2xl mb-1 text-start text-gray-300">
-//                 {title || "Untitled Project"}
-//             </h2>
-
-//             <p className="text-gray-400 text-sm mb-2 text-start font-sans">
-//                 {description}
-//             </p>
-
-//             <div className="flex justify-between items-center mt-auto">
-
-//                 {link && (
-//                     <a 
-//                         href={link} 
-//                         target="_blank" 
-//                         rel="noopener noreferrer"
-//                         className="bg-gray-700 text-white px-3 py-1 rounded hover:bg-gray-600 transition-colors"
-//                     >
-//                         <View/>
-//                     </a>
-//                 )}
-//             </div>
-//         </div>
-//         </>
-//     );
-// }
-
-// components/CardProject.tsx
-import type { ProjectItem } from "@/types/project-types";
-
-type CardProjectProps = Pick<ProjectItem, 'title' | 'description' | 'image' | 'link'>;
-
-export default function CardProject({ title, image }: CardProjectProps) {
+export default function CardProject({ title, description, image, link }: CardProjectProps) {
   return (
-    <div className="cursor-pointer bg-gray-800 rounded-lg shadow p-4 flex flex-col transition hover:shadow-2xl">
-      {image && (
+    <div className="bg-gray-800/50 backdrop-blur-sm rounded-xl overflow-hidden border border-gray-700 shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-1">
+      {/* Responsive image container */}
+      <div className="relative w-full aspect-video overflow-hidden bg-gray-900">
         <img 
           src={image} 
           alt={title}
-          className="w-full h-48 object-cover rounded mb-3"
+          className="w-full h-full object-cover object-center transition-transform duration-300 hover:scale-105"
+          loading="lazy" // Lazy load images for better performance
         />
-      )}
-      <h3 className="text-lg font-extrabold font-mono text-white mt-2 mb-2">{title}</h3>
+      </div>
+      
+      <div className="p-4">
+        <h3 className="text-lg font-semibold text-white mb-2 line-clamp-1">
+          {title}
+        </h3>
+        <p className="text-gray-400 text-sm line-clamp-2">
+          {description}
+        </p>
+        {link && (
+          <a 
+            href={link}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block mt-3 text-blue-400 hover:text-blue-300 text-sm transition-colors"
+            onClick={(e) => e.stopPropagation()}
+          >
+            View Project →
+          </a>
+        )}
+      </div>
     </div>
   );
 }

@@ -20,24 +20,27 @@ export default function Project() {
 
   return (
     <>
-      <main className="flex-1 text-gray-200 p-6 overflow-y-auto">
-        <div className="grid gap-6 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-          {items.map((item: ProjectItem, i: number) => (
-            <div 
-              key={item.id || i} 
-              onClick={() => handleCardClick(item)}
-              className="cursor-pointer"
-            >
-              <CardProject 
-                title={item.title} 
-                description={item.description} 
-                image={item.image} 
-                link={item.link}
-              />
-            </div>
-          ))}
+      <section id="projects" className="scroll-mt-20">
+        <div className="flex-1 text-gray-200 p-6 overflow-y-auto">
+          <h2 className="text-3xl font-bold text-center mb-8 text-white">My Projects</h2>
+          <div className="grid gap-6 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+            {items.map((item: ProjectItem, i: number) => (
+              <div 
+                key={item.id || i} 
+                onClick={() => handleCardClick(item)}
+                className="cursor-pointer"
+              >
+                <CardProject 
+                  title={item.title} 
+                  description={item.description} 
+                  image={item.image} 
+                  link={item.link}
+                />
+              </div>
+            ))}
+          </div>
         </div>
-      </main>
+      </section>
 
       <Modal 
         isOpen={isModalOpen}
