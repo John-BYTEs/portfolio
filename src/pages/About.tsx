@@ -60,7 +60,7 @@ export default function About() {
           About Me
         </h1>
         <div className="mb-8">
-          <p className="text-gray-300 leading-relaxed text-base sm:text-lg">
+          <p className="text-gray-300 leading-relaxed text-base sm:text-lg font-bold">
             Hello! I'm Johndel, an Information Technology enthusiast and aspiring
             Backend Developer. I specialize in building web applications using
             Laravel, PHP, MySQL, and React. I enjoy designing efficient backend
