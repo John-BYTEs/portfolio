@@ -8,6 +8,15 @@ html {
   scroll-margin-top: 80px;
 }
 
+.dotted-grid {
+  background-image: radial-gradient(
+    circle,
+    rgba(107, 114, 128, 0.2) 0.8px,
+    transparent 0.8px
+  );
+  background-size: 24px 24px;
+}
+
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {

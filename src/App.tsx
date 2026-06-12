@@ -8,7 +8,7 @@ import ScrollToTop from './components/ScrollToTop'
 
 function App() {
   return (
-    <div className="App">
+    <div className="App dotted-grid">
       <Header />
       <main>
         <section id="home">
