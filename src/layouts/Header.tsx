@@ -4,7 +4,6 @@ import {
   NavigationMenuItem,
   NavigationMenuList,
 } from "@/components/ui/navigation-menu";
-import HomeRoundedIcon from "@mui/icons-material/HomeRounded";
 import InfoIcon from "@mui/icons-material/Info";
 import FolderIcon from "@mui/icons-material/Folder";
 import MenuIcon from "@mui/icons-material/Menu";
@@ -33,7 +32,7 @@ export default function Header() {
 
   return (
     <>
-      <header className="w-full px-4 py-4 bg-gray-800/30 shadow-md font-mono font-extrabold text-md md:text-lg lg:text-xl top-0 z-50 backdrop-blur-sm">
+      <header className="w-full px-4 py-4 bg-gray-800/30 shadow-md font-sans font-extrabold text-md md:text-lg lg:text-xl top-0 z-50 backdrop-blur-sm">
         <div className="flex items-center justify-between">
           {/* Logo */}
           <button onClick={() => scrollToSection("home")} className="cursor-pointer">
@@ -83,8 +82,7 @@ export default function Header() {
                 flex flex-row gap-4 items-center
                 ${isOpen ? "max-h-10 opacity-100" : "max-h-0 opacity-0"}
               `}
-            >
-              <MobileNavItem to="home" icon={HomeRoundedIcon} label="Home" />
+            > 
               <MobileNavItem to="about" icon={InfoIcon} label="About" />
               <MobileNavItem to="projects" icon={FolderIcon} label="Projects" />
             </nav>
